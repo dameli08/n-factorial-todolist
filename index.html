@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="todo-app">
+    <div class="header">
+        <h1 class="header-title">Simple To Do List</h1>
+        <p class="header-subtitle">Today is awesome day. The weather is awesome, you are awesome too!</p>
+    </div>
+    <div class="tabs">
+        <button class="tab-button active" onclick="showList('todo')">To Do</button>
+        <button class="tab-button" onclick="showList('done')">Done</button>
+        <button class="tab-button" onclick="showList('trash')">Trash</button>
+    </div>
+    <div class="tasks" id="todoTasks"></div>
+    <div class="tasks hidden" id="doneTasks"></div>
+    <div class="tasks hidden" id="trashTasks"></div>
+    <button class="add-btn" onclick="showAddTaskModal()">+</button>
+</div>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Add New To Do</h2>
+        <textarea id="newTaskText" placeholder="Your text"></textarea>
+        <button class="add-task" onclick="addTask()">Add</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
